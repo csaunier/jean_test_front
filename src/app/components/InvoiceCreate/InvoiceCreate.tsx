@@ -1,5 +1,5 @@
 import styles from "./InvoiceCreate.module.css"
-import { BackLink } from '../../ui-component/BackLink/BackLink'
+import { BackLink } from '@uiComponents/BackLink/BackLink'
 
 export const InvoiceCreate = () => {
   return (

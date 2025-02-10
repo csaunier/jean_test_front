@@ -119,3 +119,9 @@ As much as possible, please avoid introducing new dependencies - if you find thi
 You'll find the `InvoicesList` component already started in the `components` folder.
 
 If you prefer to use JavaScript without typing, you can execute the command `yarn eject_ts`
+
+## My feebacks
+
+### Added libraries
+
+- `craco` and `react-app-alias` to have named import, without ejecting cra

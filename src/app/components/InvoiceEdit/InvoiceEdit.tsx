@@ -1,5 +1,5 @@
 import { useParams } from 'react-router'
-import { BackLink } from '../../ui-component/BackLink/BackLink'
+import { BackLink } from '@uiComponents/BackLink/BackLink'
 
 import styles from "./InvoiceEdit.module.css"
 

@@ -6,7 +6,7 @@ import { Invoice } from 'types'
 import { Link } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
 import styles from '../InvoicesList/InvoicesList.module.css'
-import { BackLink } from '../../ui-component/BackLink/BackLink'
+import { BackLink } from '../../ui-components/BackLink/BackLink'
 
 const InvoiceShow = () => {
   const { id } = useParams<{ id: string }>()
