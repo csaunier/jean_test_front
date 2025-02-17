@@ -76,7 +76,7 @@ The invoices list endpoint supports a `filter` query param which can be used as 
 
 ### API client
 
-An API client based on `openapi-client-axios` is available through a React Context set up in `src/app/index.tsx`. The context can be consumed using the `useApi` hook. Before using it, please add the token you received in `/src/app/index.tsx`. If you do not have one, please contact us.
+An API client based on `openapi-client-axios` is available through a React Context set up in `src/app/InvoiceShow.tsx`. The context can be consumed using the `useApi` hook. Before using it, please add the token you received in `/src/app/InvoiceShow.tsx`. If you do not have one, please contact us.
 
 ```tsx
 ReactDOM.render(
@@ -125,3 +125,41 @@ If you prefer to use JavaScript without typing, you can execute the command `yar
 ### Added libraries
 
 - `craco` and `react-app-alias` to have named import, without ejecting cra
+
+### Possible evolutions
+
+#### Add a dashboard
+It would expose users (admins) to data on a more graphical way.
+It would have some shortcuts to already filtered invoice listing. 
+Technically, it should be doable with currents api, but depending on the data that is exposed, and his amount, it could be good to have a dedicated endpoint.
+
+#### Allow search, filtering and sorting
+It would allow users (admins) to easily find some invoices.
+Technically, it should be doable with currents api, but depending on the amount, maybe a specific search and filter endpoint based on elasticsearch or algolia should be considered.
+It would rely on react-table.
+It would also imply some empty states in case of too aggressive filtering
+
+#### Add draft invoices
+It would allow users (admins) to save their invoices creation and start at current state later.
+Technically, it would require to add a draft flag to the api, and in this case, remove mandatory conditions on fields.
+
+#### Add reminder
+Are invoices paid in time ? Most of the time ?
+Otherwise, an automatic reminder process could be a good addition
+Technically, depending on the complexity it needs (is it parameterizable?), it will require new endpoint.
+
+#### Payment
+How customer paid their invoices ?
+Maybe it could be great to add direct integration of a payment provider on the invoice ? A QR code ?
+
+#### Design System (reusable components)
+It would ensure design coherence among pages, fasten development 
+
+#### Add e2e test (playwright)
+It would allow to add some non regressions tests, that would gave better confidence in future developments or refactors.
+
+#### (Tech) use SSR
+It would fasten user experience by improving core web vital metrics.
+
+#### (Tech) Add a Toaster
+It would improve user experience by display specific success or error message

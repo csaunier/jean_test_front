@@ -3,7 +3,11 @@
     "baseUrl": "src",
     "paths": {
       "@components/*": ["./app/components/*"],
-      "@uiComponents/*": ["./app/ui-components/*"]
+      "@uiComponents/*": ["./app/ui-components/*"],
+      "@utils/*": ["./app/utils/*"],
+      "@customTypes/*": ["./types/*"],
+      "@api/*": ["./api/*"],
+      "@mock/*": ["./mock/*"]
     }
   }
 }

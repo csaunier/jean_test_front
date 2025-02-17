@@ -4,7 +4,8 @@ import { useEffect, useCallback, useState } from 'react'
 import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-import styles from "./InvoicesList.module.css"
+import { Title } from '@uiComponents/Title/Title'
+import { CTAWrapper } from '@uiComponents/CTAWrapper/CTAWrapper'
 
 const InvoicesList = () => {
   const api = useApi()
@@ -22,15 +23,18 @@ const InvoicesList = () => {
 
   return (
     <>
-      <div className={styles.ctaWrapper}>
+      <Title>
+        Invoices listing
+      </Title>
+      <CTAWrapper>
         {/*
           Button is not accepting Link inside as props :/
           Ugly fallback, see if it's can be fixed, otherwise Link with appropriate styles
         */}
         <Link to="/invoice/create">
-          <Button as="span" size="lg">Create an invoice</Button>
+          <Button as="span">Create an invoice</Button>
         </Link>
-      </div>
+      </CTAWrapper>
       <table className="table table-bordered table-striped">
         <thead>
           <tr>
